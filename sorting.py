@@ -4,19 +4,19 @@ def swap(alist, index):
     
     The function takes a list and an index as inputs, and out outputs a list with two items swapped
     '''
-    a = alist[index] # sets the variable and puts the indexth item of alist into it.
-    b = alist[index+1]
-    alist[index] = b
-    alist[index+1] = a
-    return (alist)
+    a = alist[index] # sets the variable 'a' and puts the indexth item of alist into it.
+    b = alist[index+1] # sets the variable 'b' and puts the item after the indexth item of alist into it.
+    alist[index] = b # changes the 'b' variable into the indexth item.
+    alist[index+1] = a # changes the 'a' variable into the item after the indexth item.
+    return (alist) # returns the newly swapped alist.
 
 def bsort(alist):
-    swaps = True
-    while swaps:
-        swaps = False
-        for i in range(len(alist)-1):
-            if (alist[i] > alist[i+1]):
-                alist = swap(alist, i)
+    swaps = True # sets the variable swaps to True.
+    while swaps: # While swaps is True (as above)...
+        swaps = False # Set swaps to false.
+        for i in range(len(alist)-1): # for every number in alist apart from the final number...
+            if (alist[i] > alist[i+1]): # if the number in alist is bigger than the one after...
+                alist = swap(alist, i) # 
                 swaps = True
     return (alist)
 
