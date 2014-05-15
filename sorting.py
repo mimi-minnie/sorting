@@ -8,7 +8,7 @@ def swap(alist, index):
     b = alist[index+1] # sets the variable 'b' and puts the item after the indexth item of alist into it.
     alist[index] = b # changes the 'b' variable into the indexth item.
     alist[index+1] = a # changes the 'a' variable into the item after the indexth item.
-    return (alist) # returns the newly swapped alist.
+    return (alist) # returns the newly swapped alist into the function.
 
 def bsort(alist):
     swaps = True # sets the variable swaps to True.
@@ -16,9 +16,9 @@ def bsort(alist):
         swaps = False # Set swaps to false.
         for i in range(len(alist)-1): # for every number in alist apart from the final number...
             if (alist[i] > alist[i+1]): # if the number in alist is bigger than the one after...
-                alist = swap(alist, i) # 
-                swaps = True
-    return (alist)
+                alist = swap(alist, i) # swap the two numbers using the function above
+                swaps = True # Change swaps back to True
+    return (alist) # returns the fully swapped alist
 
 def mini(alist):
     answer = alist[0]
