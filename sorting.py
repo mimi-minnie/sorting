@@ -2,7 +2,7 @@ def swap(alist, index):
     '''
     This function swaps two items in a list.  
     
-    The function takes a list and an index as inputs, and out outputs a list with two items swapped
+    The function takes a list and an index as inputs, and out outputs a list with two items swapped.
     '''
     a = alist[index] # sets the variable 'a' and puts the indexth item of alist into it.
     b = alist[index+1] # sets the variable 'b' and puts the item after the indexth item of alist into it.
@@ -11,6 +11,11 @@ def swap(alist, index):
     return (alist) # returns the newly swapped alist into the function.
 
 def bsort(alist):
+    '''
+    This function uses bubble sort to swap all of the items in alist.
+    
+    The function uses the swap function to switch the items which need swapping, one by one.
+    '''
     swaps = True # sets the variable swaps to True.
     while swaps: # While swaps is True (as above)...
         swaps = False # Set swaps to false.
@@ -18,16 +23,26 @@ def bsort(alist):
             if (alist[i] > alist[i+1]): # if the number in alist is bigger than the one after...
                 alist = swap(alist, i) # swap the two numbers using the function above.
                 swaps = True # Change swaps back to True.
-    return (alist) # returns the fully swapped alist.
+    return (alist) # returns the fully bubble sorted alist.
 
-def mini(alist): # create a function: mini.
+def mini(alist):
+    '''
+    This function finds the minimum number in alist.
+    
+    The function is needed for selection sort.
+    '''
     answer = alist[0] # set the answer to the first value in alist.
     for item in alist: # for every item in alist...
         if item< answer: # if the item is smaller than the answer...
             answer = item # set the item as the new answer.
     return (answer) # return answer into the function.
 
-def ssort(alist): # create a function: ssort.
+def ssort(alist):
+    '''
+    This function uses selection sort to swap all of the items in alist.
+    
+    The function uses the mini function to find the minimum and switch the items which need swapping, one by one.
+    '''
     blist = [] # blist is set to nothing.
     while len(alist >0): # while the length of alist is bigger than 0.
         N = mini(alist) # set n as the mini function of alist.
@@ -38,10 +53,9 @@ def ssort(alist): # create a function: ssort.
     
 def mergeSort(alist):
     '''
-    This is another sort algorithm, this is called a merge sort, it recursively seperates and merges the items in a list untill they are sorted
-    For each line in this code write a comment explaining what the line does.
-    
-    This has some errors
+    This is another sort algorithm, this is called a merge sort, it recursively seperates and merges the items in a list until they are sorted.
+   
+    This has no errors anymore.
     '''
     
     if len(alist) >= 1: # if the length of alist is greater than or equal to one...
